@@ -75,7 +75,7 @@ const BackDrop = styled.div`
   bottom: 0;
   background: var(--color-backdrop);
 
-  animation: ${fadeIn} 300ms;
+  animation: ${fadeIn} 500ms;
 `;
 
 const Content = styled(DialogContent)`
@@ -85,13 +85,15 @@ const Content = styled(DialogContent)`
   height: 100%;
   padding: 24px 32px;
 
-  animation: ${slidesIn} 250ms both;
-  animation-delay: 50ms;
+  @media (prefers-reduced-motion: no-preference) {
+    animation: ${slidesIn} 500ms both cubic-bezier(0, 0.6, 0.32, 1.06);
+    animation-delay: 200ms;
+  }
 `;
 
 const InnerContent = styled.div`
-  animation: ${fadeIn} 1000ms;
-  animation-delay: 50ms;
+  animation: ${fadeIn} 1000ms both;
+  animation-delay: 400ms;
 
   display: flex;
   flex-direction: column;
