@@ -86,15 +86,17 @@ const Image = styled.img`
   display: block;
   width: 100%;
   /* hover out animation */
-  transition: transform 0.5s;
+  transition: transform 0.5s, filter 0.5s;
   transform-origin: 50% 75%;
   will-change: transform;
+  filter: brightness(0.9);
 
   @media (hover: hover) and (prefers-reduced-motion: no-preference) {
     ${Link}:hover &,
     ${Link}:focus & {
       transform: scale(1.1);
-      transition: transform 0.25s;
+      transition: transform 0.25s, filter 0.25s;
+      filter: brightness(1);
     }
   }
 `;
