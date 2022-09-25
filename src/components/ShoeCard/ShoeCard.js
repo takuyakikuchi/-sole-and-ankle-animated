@@ -82,6 +82,7 @@ const ImageWrapper = styled.div`
 `;
 
 const Image = styled.img`
+  display: block;
   width: 100%;
   /* hover out animation */
   transition: transform 0.5s;
