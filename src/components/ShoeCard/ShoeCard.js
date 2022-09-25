@@ -87,10 +87,13 @@ const Image = styled.img`
   width: 100%;
   /* hover out animation */
   transition: transform 0.5s;
-  ${Link}:hover &,
-  ${Link}:focus & {
-    transform: scale(1.1);
-    transition: transform 0.25s;
+
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    ${Link}:hover &,
+    ${Link}:focus & {
+      transform: scale(1.1);
+      transition: transform 0.25s;
+    }
   }
 `;
 
