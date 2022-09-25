@@ -46,6 +46,15 @@ const fadeIn = keyframes`
   }
 `;
 
+const slidesIn = keyframes`
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+`;
+
 const Wrapper = styled(DialogOverlay)`
   display: flex;
   justify-content: flex-end;
@@ -75,6 +84,9 @@ const Content = styled(DialogContent)`
   padding: 24px 32px;
   display: flex;
   flex-direction: column;
+
+  animation: ${slidesIn} 250ms both;
+  animation-delay: 50ms;
 `;
 
 const CloseButton = styled(UnstyledButton)`
