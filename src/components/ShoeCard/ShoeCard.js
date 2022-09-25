@@ -73,10 +73,11 @@ const Link = styled.a`
   color: inherit;
 `;
 
-const Wrapper = styled.article``;
+const Wrapper = styled.article`
+  position: relative;
+`;
 
 const ImageWrapper = styled.div`
-  position: relative;
   overflow: hidden;
   border-radius: 16px 16px 4px 4px;
 `;
