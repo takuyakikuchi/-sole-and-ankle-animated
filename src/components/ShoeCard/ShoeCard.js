@@ -88,6 +88,7 @@ const Image = styled.img`
   /* hover out animation */
   transition: transform 0.5s;
   transform-origin: 50% 75%;
+  will-change: transform;
 
   @media (hover: hover) and (prefers-reduced-motion: no-preference) {
     ${Link}:hover &,
